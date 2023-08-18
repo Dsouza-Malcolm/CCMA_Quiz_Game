@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* first webpage design layout */
+
+.container {
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #565555 0%, black 100%);
+  user-select: none;
+}
+
+.f--container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: auto;
+}
+
+.f--title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 150px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.question--container {
+  background-color: white;
+  color: #616161;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 60%;
+  padding: 2rem;
+  border: none;
+  border-radius: 20px;
+}
+
+.question--title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.question--list {
+  margin-left: 30px;
+}
+
+.questions {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  line-height: 1.5rem;
+  user-select: none;
+}
+
+.button {
+  text-align: right;
+}
+
+.btn {
+  display: inline-block;
+  background-color: rgb(252, 54, 54);
+  color: white;
+  font-size: 1rem;
+  font-weight: 900;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.note--block {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.note {
+  color: red;
+  font-weight: 900;
+}
+
+/* --------------------------------------------- */
+/* main html file for riddle game */
+
+.bg--color {
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+.s--container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  justify-content: center;
+  align-content: flex-start;
+  row-gap: 2.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.s--margin {
+  font-size: 25px;
+  margin-bottom: 10px;
+  width: 25%;
+}
+
+.input--container {
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  width: 50%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 2rem;
+  margin: auto;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border: none;
+  border-radius: 10px;
+}
+
+.hint--container {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.input--container > * {
+  margin-bottom: 2rem;
+}
+
+#question {
+  margin: 20px 0;
+  /* margin-top: 20px; */
+}
+
+.msg--box {
+  background-color: black;
+  color: white;
+  padding: 8px;
+  font-size: 12px;
+  border: none;
+  border-radius: 8px;
+}
+
+#msg {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #5f5e5e;
+}
+
+.count {
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  font-size: 14px;
+  padding: 8px;
+  border: none;
+  border-radius: 50%;
+}
+
+.hint--box {
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+}
+
+#answer {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+
+.clock--block {
+  background-color: black;
+  color: white;
+}
+
+.flex-wrapper {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#btn {
+  background-color: #b8235a;
+  padding: 8px 15px;
+  margin: 0;
+  border: 1px solid purple;
+  border-radius: 10px;
+  outline: none;
+}
+
+#btn:hover {
+  color: white;
+}
+
+input:focus {
+  outline: 1px solid black;
+}
+
+#hint {
+  color: white;
+}
+
+@media only screen and (min-width: 960px) {
+  .f--container {
+    max-width: 1200px;
+    min-width: 801px;
+    width: auto;
+    min-height: 100vh;
+  }
+
+  .s--container {
+    max-width: 1200px;
+    min-width: 801px;
+    width: auto;
+    min-height: 100vh;
+  }
+
+  .hint--container {
+    margin: 0 150px;
+  }
+}
